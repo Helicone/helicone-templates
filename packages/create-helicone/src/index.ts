@@ -90,6 +90,8 @@ ${chalk.bold("Next steps:")}
 ${chalk.bold("Documentation:")}
   ${chalk.cyan("https://docs.helicone.ai/templates/" + options.template)}
 `);
+      // Ensure the process exits cleanly
+      process.exit(0);
     } catch (error) {
       console.error(`${chalk.red("Error:")} ${(error as Error).message}`);
       process.exit(1);
