@@ -20,7 +20,7 @@ export async function createProject(
   const targetDir = path.resolve(process.cwd(), projectName);
 
   // Source template path
-  const templatePath = `colegottdank/helicone-templates/templates/${template}/template`;
+  const templatePath = `helicone/helicone-templates/templates/${template}/template`;
 
   // Check if directory exists
   try {
