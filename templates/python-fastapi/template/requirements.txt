@@ -1,0 +1,4 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+openai>=0.28  # works with both v0.x and v1.x style APIs
+python-dotenv>=1.0 

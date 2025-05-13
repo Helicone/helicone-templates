@@ -1,0 +1,36 @@
+name: Publish CLI
+
+on:
+  push:
+    tags:
+      - "cli/v*" # Only run when tags starting with cli/v are pushed
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Extract version from tag
+        id: extract_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/cli/v}" >> $GITHUB_OUTPUT
+
+      - name: Install dependencies
+        run: cd packages/create-helicone && npm ci
+
+      - name: Build package
+        run: cd packages/create-helicone && npm run build
+
+      - name: Update version from tag
+        run: cd packages/create-helicone && npm version ${{ steps.extract_version.outputs.VERSION }} --no-git-tag-version
+
+      - name: Publish to npm
+        run: cd packages/create-helicone && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

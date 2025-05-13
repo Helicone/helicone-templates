@@ -1,0 +1,11 @@
+{
+  "name": "helicone-templates",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:cli": "cd packages/create-helicone && npm run build",
+    "lint:cli": "cd packages/create-helicone && npm run lint"
+  }
+}
