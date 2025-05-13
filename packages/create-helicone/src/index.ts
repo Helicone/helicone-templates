@@ -20,7 +20,7 @@ interface CliOptions {
   list?: boolean;
 }
 
-const cli = cac("create-helicone");
+const cli = cac("create-helicone-app");
 
 cli
   .command(
@@ -46,7 +46,7 @@ cli
     if (!projectDirectory) {
       console.error(chalk.red("Please specify a project directory:"));
       console.log(
-        `  ${chalk.cyan("npx create-helicone")} ${chalk.green("my-app")}`
+        `  ${chalk.cyan("npx create-helicone-app")} ${chalk.green("my-app")}`
       );
       process.exit(1);
     }

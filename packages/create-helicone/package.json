@@ -1,10 +1,10 @@
 {
-  "name": "create-helicone",
+  "name": "create-helicone-app",
   "version": "0.1.0",
   "description": "CLI to generate Helicone-integrated projects from templates",
   "type": "module",
   "bin": {
-    "create-helicone": "dist/index.js"
+    "create-helicone-app": "dist/index.js"
   },
   "files": [
     "dist"
