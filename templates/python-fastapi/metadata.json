@@ -1,0 +1,9 @@
+{
+  "title": "Python FastAPI + Helicone Template",
+  "description": "A minimal FastAPI server with a single /chat endpoint that proxies requests to OpenAI through Helicone for monitoring and analysis.",
+  "author": "Helicone",
+  "tags": ["python", "fastapi", "helicone", "openai", "monitoring", "llm"],
+  "logo": "",
+  "lastUpdated": "2024-07-19",
+  "difficulty": "easy"
+}
