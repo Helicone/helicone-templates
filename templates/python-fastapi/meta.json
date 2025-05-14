@@ -1,6 +1,0 @@
-{
-  "name": "python-fastapi",
-  "description": "Minimal FastAPI server with a /chat endpoint using OpenAI routed through the Helicone proxy.",
-  "language": "python",
-  "tags": ["fastapi", "openai", "helicone"]
-}
